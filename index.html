@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" async></script>
+    <script src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <div id="rangeBox">
+        <label for="range" class="form-label" id="rangeValue">0%</label>
+        <input type="range" class="form-range" id="range" min="0" max="100" value="0" onchange="updateRange()">
+        <p id="zeitalter">Präkambrium</p>
+        <p id="notiz">Erste Bakterien und Organismen entstehen</p>
+    </div>
+    <figure class="box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/RT8-4.jpg/300px-RT8-4.jpg">
+        <figcaption>Archaeen, ein Urbakterium</figcaption>
+    </figure>
+    <figure id="mehrzeller" class="box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Volvox_aureus_3_Ansichten.jpg/600px-Volvox_aureus_3_Ansichten.jpg">
+        <figcaption>Beispielhafter Mehrzeller</figcaption>
+        <script>
+            document.getElementById("mehrzeller").style.display = "none"
+        </script>
+    </figure>
+    <figure id="uhrschecke" class="box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Parapuzosia_seppenradensis_cast.jpg/440px-Parapuzosia_seppenradensis_cast.jpg">
+        <figcaption>Fosile der Urscheke Ammoniten</figcaption>
+        <script>
+            document.getElementById("uhrschecke").style.display = "none"
+        </script>
+    </figure>
+    <figure id="uhrfisch" class="box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Fischskelett-drawing.jpg/600px-Fischskelett-drawing.jpg">
+        <figcaption>Bild des Skelets des Knochenfisches, ein Urfisch</figcaption>
+        <script>
+            document.getElementById("uhrfisch").style.display = "none"
+        </script>
+    </figure>
+    <figure id="reptilie" class="box">
+        <img src="https://www.scinexx.de/wp-content/uploads/0/1/01-31476-drepano.jpg">
+        <figcaption>Ungefähres Aussehen eines Urreptilies</figcaption>
+        <script>
+            document.getElementById("reptilie").style.display = "none"
+        </script>
+    </figure>
+    <figure id="dino" class="box">
+        <img src="data:image/jpeg;base64,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">
+        <figcaption>Bild eines Skeletes eines Dinosauriers</figcaption>
+        <script>
+            document.getElementById("dino").style.display = "none"
+        </script>
+    </figure>
+    <figure id="saeugetier" class="box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Thrinaxodon_BW.jpg">
+        <figcaption>Ungefähres Aussehen des Thrinaxodon, ein Urzeit Säugetier</figcaption>
+        <script>
+            document.getElementById("saeugetier").style.display = "none"
+        </script>
+    </figure>
+    <figure id="primaten" class="box">
+        <img src="https://img.welt.de/img/wissenschaft/mobile101809502/0321357267-ci16x9-w1200/anthropologie-entwicklung-homo-sapiens-BM-Wissenschaft-Greifswald-jpg.jpg">
+        <figcaption>Verlauf der Entwicklung der Primaten</figcaption>
+        <script>
+            document.getElementById("primaten").style.display = "none"
+        </script>
+    </figure>
+</body>
+</html>

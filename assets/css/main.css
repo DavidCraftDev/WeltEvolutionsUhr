@@ -1,0 +1,21 @@
+#rangeBox {
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+}
+
+#rangeValue {
+    text-align: center;
+}
+
+img {
+    width: auto;
+    height: 200px;
+}
+
+.box {
+    float: left;
+    margin-right: 3.33333%;
+    padding: 20px;
+    box-sizing: border-box;
+}
